@@ -1,30 +1,29 @@
-# Java education website
 
-*Automatically synced with your [v0.app](https://v0.app) deployments*
+# DeepCodeWarriors
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/deepaishte-3500s-projects/v0-java-education-website)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.app-black?style=for-the-badge)](https://v0.app/chat/projects/0QTjA9Z7HT3)
+An educational platform for learning Java, Python, Flutter, Web Development, and Data Structures & Algorithms.
 
-## Overview
+## Frontend
 
-This repository will stay in sync with your deployed chats on [v0.app](https://v0.app).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.app](https://v0.app).
+- Next.js
+- React
+- Tailwind CSS
+- Firebase (if configured)
 
 ## Deployment
 
-Your project is live at:
+The frontend is deployed using Vercel.
 
-**[https://vercel.com/deepaishte-3500s-projects/v0-java-education-website](https://vercel.com/deepaishte-3500s-projects/v0-java-education-website)**
+## Development
 
-## Build your app
+Install dependencies:
 
-Continue building your app on:
+```bash
+npm install
+```
 
-**[https://v0.app/chat/projects/0QTjA9Z7HT3](https://v0.app/chat/projects/0QTjA9Z7HT3)**
+Run the development server:
 
-## How It Works
-
-1. Create and modify your project using [v0.app](https://v0.app)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+```bash
+npm run dev
+```
