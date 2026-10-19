@@ -8,104 +8,83 @@ import { Footer } from "@/components/footer"
 
 const tutorialCategories = [
   {
-    title: "Java Basics",
-    description: "Start your Java journey with fundamental concepts",
+    title: "Web Development",
+    description: "Start your journey in building modern web applications",
     tutorials: [
       {
-        title: "Introduction to Java",
-        description: "History, features, and why choose Java",
+        title: "Introduction to HTML & CSS",
+        description: "Learn the foundational building blocks of the web",
         duration: "15 min",
         level: "Beginner",
-        slug: "introduction-to-java",
+        slug: "introduction-to-html-css",
       },
       {
-        title: "Setting up Java Environment",
-        description: "Install JDK, IDE setup, and first program",
+        title: "JavaScript Fundamentals",
+        description: "Variables, functions, and DOM manipulation",
         duration: "20 min",
         level: "Beginner",
-        slug: "java-environment-setup",
+        slug: "javascript-fundamentals",
       },
       {
-        title: "Java Syntax and Structure",
-        description: "Basic syntax, keywords, and program structure",
+        title: "React Basics",
+        description: "Components, state, and props in React",
         duration: "25 min",
         level: "Beginner",
-        slug: "java-syntax-structure",
-      },
-      {
-        title: "Variables and Data Types",
-        description: "Primitive types, variables, and type conversion",
-        duration: "30 min",
-        level: "Beginner",
-        slug: "variables-data-types",
+        slug: "react-basics",
       },
     ],
   },
   {
-    title: "Object-Oriented Programming",
-    description: "Master OOP concepts in Java",
+    title: "Software Engineering Core",
+    description: "Master foundational programming and systems concepts",
     tutorials: [
       {
-        title: "Classes and Objects",
-        description: "Creating classes, objects, and understanding instances",
+        title: "Object-Oriented Programming",
+        description: "Classes, inheritance, and polymorphism in Python and Java",
         duration: "35 min",
         level: "Intermediate",
-        slug: "classes-objects",
+        slug: "oop-concepts",
       },
       {
-        title: "Inheritance",
-        description: "Extending classes and method overriding",
+        title: "Database Design",
+        description: "SQL, normalization, and relational models",
         duration: "40 min",
         level: "Intermediate",
-        slug: "inheritance",
+        slug: "database-design",
       },
       {
-        title: "Polymorphism",
-        description: "Method overloading and runtime polymorphism",
+        title: "System Architecture",
+        description: "Monoliths vs microservices, APIs, and networking",
         duration: "45 min",
         level: "Intermediate",
-        slug: "polymorphism",
-      },
-      {
-        title: "Encapsulation and Abstraction",
-        description: "Data hiding and abstract classes/interfaces",
-        duration: "50 min",
-        level: "Intermediate",
-        slug: "encapsulation-abstraction",
+        slug: "system-architecture",
       },
     ],
   },
   {
-    title: "Advanced Java",
-    description: "Dive into advanced Java concepts and frameworks",
+    title: "Advanced Topics",
+    description: "Dive into advanced frameworks and scaling",
     tutorials: [
       {
-        title: "Collections Framework",
-        description: "List, Set, Map, and their implementations",
+        title: "Next.js App Router",
+        description: "Server components, routing, and data fetching",
         duration: "60 min",
         level: "Advanced",
-        slug: "collections-framework",
+        slug: "nextjs-app-router",
       },
       {
-        title: "Exception Handling",
-        description: "Try-catch, custom exceptions, and best practices",
+        title: "Docker & Containerization",
+        description: "Building images, Docker compose, and orchestration",
         duration: "45 min",
         level: "Advanced",
-        slug: "exception-handling",
+        slug: "docker-basics",
       },
       {
-        title: "Multithreading",
-        description: "Thread creation, synchronization, and concurrency",
+        title: "System Design for Interviews",
+        description: "Load balancers, caching, and database scaling",
         duration: "70 min",
         level: "Advanced",
-        slug: "multithreading",
-      },
-      {
-        title: "JDBC and Database Connectivity",
-        description: "Connecting to databases and executing queries",
-        duration: "55 min",
-        level: "Advanced",
-        slug: "jdbc-database",
+        slug: "system-design-interviews",
       },
     ],
   },
@@ -121,10 +100,10 @@ export default function TutorialsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl sm:text-5xl font-bold text-balance mb-6">
-              Java <span className="text-primary">Tutorials</span>
+              Coding <span className="text-primary">Tutorials</span>
             </h1>
             <p className="text-xl text-muted-foreground text-pretty max-w-2xl mx-auto">
-              Comprehensive step-by-step tutorials to master Java programming from basics to advanced concepts
+              Comprehensive step-by-step tutorials to master software engineering from basics to advanced concepts
             </p>
           </div>
         </div>

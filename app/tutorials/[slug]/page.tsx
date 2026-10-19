@@ -194,10 +194,6 @@ export default function TutorialPage({ params }: TutorialPageProps) {
                   <Badge variant={tutorial.level === "Beginner" ? "secondary" : "default"}>{tutorial.level}</Badge>
                 </div>
               </div>
-              <Button variant="outline">
-                <Download className="mr-2 w-4 h-4" />
-                Download PDF
-              </Button>
             </div>
           </CardHeader>
         </Card>

@@ -2,92 +2,68 @@ import { Navigation } from "@/components/navigation"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Download, FileText, ExternalLink, Eye } from "lucide-react"
+import { FileText, ExternalLink, Eye, Play } from "lucide-react"
 import Link from "next/link"
 import { Footer } from "@/components/footer"
 
 const noteCategories = [
   {
-    title: "Core Java Notes",
-    description: "Comprehensive notes covering fundamental Java concepts",
+    title: "Data Structures & Algorithms",
+    description: "Comprehensive notes covering fundamental DSA concepts",
     resources: [
       {
-        title: "Java Basics Complete Guide",
-        description: "Variables, data types, operators, and control structures",
-        type: "PDF",
-        size: "2.5 MB",
-        pages: 45,
-        downloadUrl: "#",
-        previewUrl: "/notes/java-basics",
+        title: "Arrays & Linked Lists Complete Guide",
+        description: "Memory allocation, traversal, and common operations",
+        type: "Web Guide",
+        previewUrl: "/notes/arrays-linked-lists",
       },
       {
-        title: "Object-Oriented Programming in Java",
-        description: "Classes, objects, inheritance, polymorphism, and encapsulation",
-        type: "PDF",
-        size: "3.2 MB",
-        pages: 62,
-        downloadUrl: "#",
-        previewUrl: "/notes/oop-java",
+        title: "Trees and Graphs",
+        description: "BST, AVL, Traversal algorithms, and shortest paths",
+        type: "Web Guide",
+        previewUrl: "/notes/trees-graphs",
       },
       {
-        title: "Exception Handling Guide",
-        description: "Try-catch blocks, custom exceptions, and best practices",
-        type: "PDF",
-        size: "1.8 MB",
-        pages: 28,
-        downloadUrl: "#",
-        previewUrl: "/notes/exception-handling",
+        title: "Dynamic Programming Guide",
+        description: "Memoization, tabulation, and state transitions",
+        type: "Web Guide",
+        previewUrl: "/notes/dynamic-programming",
       },
       {
-        title: "Java Collections Framework",
-        description: "List, Set, Map interfaces and their implementations",
-        type: "PDF",
-        size: "4.1 MB",
-        pages: 78,
-        downloadUrl: "#",
-        previewUrl: "/notes/collections",
+        title: "Sorting and Searching",
+        description: "Quick sort, merge sort, binary search and their complexities",
+        type: "Web Guide",
+        previewUrl: "/notes/sorting-searching",
       },
     ],
   },
   {
-    title: "Advanced Java",
-    description: "Advanced topics and enterprise Java development",
+    title: "Web Development",
+    description: "Modern frontend and backend development notes",
     resources: [
       {
-        title: "Multithreading and Concurrency",
-        description: "Thread creation, synchronization, and concurrent programming",
-        type: "PDF",
-        size: "3.5 MB",
-        pages: 56,
-        downloadUrl: "#",
-        previewUrl: "/notes/multithreading",
+        title: "React & Next.js Ecosystem",
+        description: "Hooks, Server Components, Routing, and State Management",
+        type: "Web Guide",
+        previewUrl: "/notes/react-nextjs",
       },
       {
-        title: "JDBC and Database Programming",
-        description: "Database connectivity, prepared statements, and transactions",
-        type: "PDF",
-        size: "2.9 MB",
-        pages: 42,
-        downloadUrl: "#",
-        previewUrl: "/notes/jdbc",
+        title: "Node.js and Express",
+        description: "REST APIs, Middleware, and asynchronous programming",
+        type: "Web Guide",
+        previewUrl: "/notes/nodejs-express",
       },
       {
-        title: "Java Servlets and JSP",
-        description: "Web development with Java servlets and JavaServer Pages",
-        type: "PDF",
-        size: "4.8 MB",
-        pages: 89,
-        downloadUrl: "#",
-        previewUrl: "/notes/servlets-jsp",
+        title: "CSS Architecture",
+        description: "Tailwind, CSS Modules, and responsive design patterns",
+        type: "Web Guide",
+        previewUrl: "/notes/css-architecture",
       },
       {
-        title: "Spring Framework Basics",
-        description: "Introduction to Spring IoC, DI, and MVC architecture",
-        type: "PDF",
-        size: "5.2 MB",
-        pages: 95,
-        downloadUrl: "#",
-        previewUrl: "/notes/spring-basics",
+        title: "Database Management Systems",
+        description: "SQL vs NoSQL, indexing, normalization, and ACID properties",
+        type: "Web Guide",
+        previewUrl: "/notes/dbms",
       },
     ],
   },
@@ -96,31 +72,22 @@ const noteCategories = [
     description: "Handy reference materials and cheat sheets",
     resources: [
       {
-        title: "Java Syntax Cheat Sheet",
-        description: "Quick reference for Java syntax and common patterns",
-        type: "PDF",
-        size: "0.8 MB",
-        pages: 12,
-        downloadUrl: "#",
-        previewUrl: "/notes/syntax-cheat-sheet",
+        title: "Git & GitHub Cheat Sheet",
+        description: "Quick reference for branching, merging, and collaboration",
+        type: "Web Guide",
+        previewUrl: "/notes/git-cheat-sheet",
       },
       {
-        title: "Java API Reference",
-        description: "Commonly used classes and methods from Java API",
-        type: "PDF",
-        size: "1.5 MB",
-        pages: 24,
-        downloadUrl: "#",
-        previewUrl: "/notes/api-reference",
+        title: "Linux Command Line",
+        description: "Commonly used bash commands and shell scripting basics",
+        type: "Web Guide",
+        previewUrl: "/notes/linux-commands",
       },
       {
-        title: "Design Patterns in Java",
-        description: "Implementation of common design patterns with examples",
-        type: "PDF",
-        size: "3.8 MB",
-        pages: 67,
-        downloadUrl: "#",
-        previewUrl: "/notes/design-patterns",
+        title: "System Design Basics",
+        description: "Load balancing, caching, microservices, and scalability",
+        type: "Web Guide",
+        previewUrl: "/notes/system-design",
       },
     ],
   },
@@ -128,27 +95,27 @@ const noteCategories = [
 
 const externalResources = [
   {
-    title: "Oracle Java Documentation",
-    description: "Official Java documentation and API reference",
-    url: "https://docs.oracle.com/javase/",
+    title: "MDN Web Docs",
+    description: "The most comprehensive resource for web developers",
+    url: "https://developer.mozilla.org/",
     type: "External Link",
   },
   {
-    title: "Java Code Geeks",
-    description: "Java tutorials, examples, and best practices",
-    url: "https://www.javacodegeeks.com/",
+    title: "LeetCode Patterns",
+    description: "Categorized algorithmic patterns for interview prep",
+    url: "https://leetcode.com/",
     type: "External Link",
   },
   {
-    title: "Baeldung Java Tutorials",
-    description: "In-depth Java tutorials and guides",
-    url: "https://www.baeldung.com/",
+    title: "System Design Primer",
+    description: "Learn how to design large-scale systems",
+    url: "https://github.com/donnemartin/system-design-primer",
     type: "External Link",
   },
   {
-    title: "GitHub Java Projects",
-    description: "Open source Java projects for learning",
-    url: "https://github.com/topics/java",
+    title: "roadmap.sh",
+    description: "Step by step guides and paths to learn different tools",
+    url: "https://roadmap.sh/",
     type: "External Link",
   },
 ]
@@ -163,10 +130,10 @@ export default function NotesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl sm:text-5xl font-bold text-balance mb-6">
-              Java <span className="text-primary">Notes & Resources</span>
+              Developer <span className="text-primary">Notes & Resources</span>
             </h1>
             <p className="text-xl text-muted-foreground text-pretty max-w-2xl mx-auto">
-              Comprehensive study materials, reference guides, and external resources for Java learning
+              Comprehensive study materials, reference guides, and external resources for mastering software engineering
             </p>
           </div>
         </div>
@@ -197,22 +164,14 @@ export default function NotesPage() {
                       </div>
                       <div className="flex items-center gap-4 mt-4">
                         <Badge variant="outline">{resource.type}</Badge>
-                        <span className="text-sm text-muted-foreground">{resource.size}</span>
-                        <span className="text-sm text-muted-foreground">{resource.pages} pages</span>
                       </div>
                     </CardHeader>
                     <CardContent>
                       <div className="flex gap-2">
                         <Button asChild className="flex-1">
-                          <Link href={resource.downloadUrl}>
-                            <Download className="mr-2 w-4 h-4" />
-                            Download
-                          </Link>
-                        </Button>
-                        <Button asChild variant="outline">
                           <Link href={resource.previewUrl}>
                             <Eye className="mr-2 w-4 h-4" />
-                            Preview
+                            Read Online
                           </Link>
                         </Button>
                       </div>
@@ -264,3 +223,4 @@ export default function NotesPage() {
     </main>
   )
 }
+

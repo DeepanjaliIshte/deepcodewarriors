@@ -260,10 +260,6 @@ export default function NotePage({ params }: NotePageProps) {
                 <p className="text-lg text-muted-foreground">{note.description}</p>
               </div>
               <div className="flex gap-2">
-                <Button variant="outline">
-                  <Download className="mr-2 w-4 h-4" />
-                  Download PDF
-                </Button>
                 <Button>
                   <FileText className="mr-2 w-4 h-4" />
                   Print
@@ -291,7 +287,7 @@ export default function NotePage({ params }: NotePageProps) {
                   )
                   .replace(/`([^`]+)`/g, '<code class="bg-muted px-2 py-1 rounded text-sm font-mono">$1</code>')
                   .replace(/^- (.*)/gm, '<li class="mb-1 text-foreground">$1</li>')
-                  .replace(/(<li.*<\/li>)/s, '<ul class="list-disc list-inside mb-4 space-y-1">$1</ul>')
+                  .replace(/(<li[\s\S]*<\/li>)/, '<ul class="list-disc list-inside mb-4 space-y-1">$1</ul>')
                   .replace(/\n\n/g, '</p><p class="mb-4 leading-relaxed text-foreground">')
                   .replace(/^(?!<[h|p|u|l|c|d])(.+)$/gm, '<p class="mb-4 leading-relaxed text-foreground">$1</p>'),
               }}

@@ -158,7 +158,7 @@ function QuestionCard({ question, index }: { question: any; index: number }) {
                   )
                   .replace(/`([^`]+)`/g, '<code class="bg-muted px-2 py-1 rounded text-sm font-mono">$1</code>')
                   .replace(/^- (.*)/gm, '<li class="mb-1 text-foreground">$1</li>')
-                  .replace(/(<li.*<\/li>)/s, '<ul class="list-disc list-inside mb-3 space-y-1">$1</ul>')
+                  .replace(/(<li[\s\S]*<\/li>)/, '<ul class="list-disc list-inside mb-3 space-y-1">$1</ul>')
                   .replace(/\n\n/g, '</p><p class="mb-3 leading-relaxed text-foreground">')
                   .replace(/^(?!<[h|p|u|l|c|d])(.+)$/gm, '<p class="mb-3 leading-relaxed text-foreground">$1</p>'),
               }}

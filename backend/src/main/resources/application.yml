@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/deep_code_warriors}
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:password}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  security:
+    jwt:
+      secret: ${JWT_SECRET:83f7d1b3e8a4c95f190e4f2b1d75c8a3f9e4b7d1c6a2f8b5d3e0c4a9f1b7d5e2}
+      expiration: 86400000 # 24 hours
+
+server:
+  port: 8080

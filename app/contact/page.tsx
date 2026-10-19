@@ -3,18 +3,19 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Mail, MessageSquare, Github, Linkedin, ExternalLink } from "lucide-react"
+import { Mail, MessageSquare, Github, Linkedin, Instagram, ExternalLink } from "lucide-react"
 import Link from "next/link"
 import { Footer } from "@/components/footer"
 
 export default function ContactPage() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-[#060913] text-foreground flex flex-col selection:bg-orange-500/30 selection:text-orange-200">
       <Navigation />
 
       {/* Header */}
-      <section className="py-16 bg-gradient-to-br from-background via-muted/30 to-secondary/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 relative overflow-hidden border-b border-slate-800/80 bg-gradient-to-b from-blue-950/20 via-slate-950/40 to-[#060913]">
+        <div className="absolute top-0 right-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center">
             <h1 className="text-4xl sm:text-5xl font-bold text-balance mb-6">
               Get in <span className="text-primary">Touch</span>
@@ -52,6 +53,34 @@ export default function ContactPage() {
                     <Button asChild variant="outline" className="w-full bg-transparent">
                       <Link href="mailto:deepcodewarriors@gmail.com">
                         deepcodewarriors@gmail.com
+                        <ExternalLink className="ml-2 w-4 h-4" />
+                      </Link>
+                    </Button>
+                  </CardContent>
+                </Card>
+
+                {/* Instagram Profile */}
+                <Card>
+                  <CardHeader>
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                        <Instagram className="w-5 h-5 text-primary" />
+                      </div>
+                      <div>
+                        <CardTitle className="text-lg">Instagram</CardTitle>
+                        <CardDescription>Follow updates & coding tips</CardDescription>
+                      </div>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <Button asChild variant="outline" className="w-full bg-transparent hover:border-primary/50 hover:bg-primary/5">
+                      <Link
+                        href="https://www.instagram.com/deepcodewarriors/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="DeepCodeWarriors on Instagram"
+                      >
+                        @deepcodewarriors
                         <ExternalLink className="ml-2 w-4 h-4" />
                       </Link>
                     </Button>

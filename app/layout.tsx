@@ -13,16 +13,26 @@ export const metadata: Metadata = {
   generator: "v0.app",
 }
 
+import { ThemeProvider } from "@/components/theme-provider"
+import { AuthProvider } from "@/context/AuthContext"
+import { ProgressProvider } from "@/context/ProgressContext"
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
-        <Suspense fallback={null}>{children}</Suspense>
-        <Analytics />
+    <html lang="en" suppressHydrationWarning>
+      <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} min-h-screen bg-background font-sans antialiased`}>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
+          <AuthProvider>
+            <ProgressProvider>
+              <Suspense fallback={null}>{children}</Suspense>
+              <Analytics />
+            </ProgressProvider>
+          </AuthProvider>
+        </ThemeProvider>
       </body>
     </html>
   )

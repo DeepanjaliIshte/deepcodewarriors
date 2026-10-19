@@ -54,27 +54,31 @@ const quickStats = [
 
 export default function InterviewPrepPage() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-[#060913] text-foreground flex flex-col selection:bg-orange-500/30 selection:text-orange-200">
       <Navigation />
 
       {/* Header */}
-      <section className="py-16 bg-gradient-to-br from-background via-muted/30 to-secondary/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 relative overflow-hidden border-b border-slate-800/80 bg-gradient-to-b from-blue-950/20 via-slate-950/40 to-[#060913]">
+        <div className="absolute top-0 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center">
-            <h1 className="text-4xl sm:text-5xl font-bold text-balance mb-6">
-              Java <span className="text-primary">Interview Preparation</span>
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/10 border border-orange-500/30 text-orange-400 text-xs font-semibold tracking-wider uppercase mb-4">
+              FAANG & High-Growth Tech Interview Hub
+            </div>
+            <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-white mb-6">
+              Technical <span className="text-orange-500">Interview Preparation</span>
             </h1>
-            <p className="text-xl text-muted-foreground text-pretty max-w-2xl mx-auto mb-8">
-              Comprehensive collection of Java interview questions and answers to help you ace your next technical
-              interview
+            <p className="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+              Master the core data structures, system design fundamentals, concurrency, and OOP interview problems
+              asked by premier engineering employers.
             </p>
 
             {/* Quick Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
               {quickStats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-2xl font-bold text-primary">{stat.value}</div>
-                  <div className="text-sm text-muted-foreground">{stat.label}</div>
+                <div key={index} className="rounded-xl border border-slate-800 bg-slate-900/60 p-4 text-center backdrop-blur-md">
+                  <div className="text-2xl font-bold text-orange-400">{stat.value}</div>
+                  <div className="text-xs text-slate-400 font-medium mt-1">{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -87,7 +91,7 @@ export default function InterviewPrepPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {interviewCategories.map((category, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow">
+              <Card key={index} className="hover:border-cyan-500/40 transition-all border-slate-800/80 bg-slate-900/50 backdrop-blur-sm overflow-hidden flex flex-col justify-between">
                 <CardHeader>
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">

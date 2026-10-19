@@ -7,32 +7,32 @@ export function FeaturesSection() {
       icon: BookOpen,
       title: "Comprehensive Tutorials",
       description:
-        "Step-by-step Java tutorials from basics to advanced topics including OOP, Collections, and Frameworks.",
+        "Step-by-step coding tutorials from basics to advanced topics including DSA, Web Dev, and System Design.",
     },
     {
       icon: Code,
       title: "Hands-on Programs",
-      description: "Practical Java programs with detailed explanations and output examples to reinforce learning.",
+      description: "Practical coding programs with detailed explanations and output examples to reinforce learning.",
     },
     {
       icon: FileText,
       title: "Detailed Notes",
-      description: "Well-structured notes and PDFs covering all Java concepts for easy reference and study.",
+      description: "Well-structured notes covering essential programming concepts for easy reference and study.",
     },
     {
       icon: Users,
       title: "Interview Preparation",
-      description: "Extensive collection of Java interview questions and answers to help you ace your interviews.",
+      description: "Extensive collection of technical interview questions and answers to help you ace your interviews.",
     },
     {
       icon: Download,
       title: "Free Resources",
-      description: "All educational materials are freely available for download and personal use.",
+      description: "All educational materials are freely available for personal use and offline learning.",
     },
     {
       icon: MessageCircle,
       title: "Community Support",
-      description: "Join our WhatsApp channel and connect with fellow Java learners and get help.",
+      description: "Join our channels and connect with fellow developers to share knowledge and get help.",
     },
   ]
 
@@ -40,9 +40,9 @@ export function FeaturesSection() {
     <section className="py-20 bg-muted/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-balance mb-4">Everything You Need to Learn Java</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-balance mb-4">Everything You Need to Master Coding</h2>
           <p className="text-xl text-muted-foreground text-pretty max-w-2xl mx-auto">
-            Comprehensive resources designed to take you from beginner to advanced Java developer
+            Comprehensive resources designed to take you from beginner to advanced software engineer
           </p>
         </div>
 
@@ -65,3 +65,4 @@ export function FeaturesSection() {
     </section>
   )
 }
+
